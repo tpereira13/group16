@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-group16-service1
+  labels: 
+    app: group16-app-service1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group16-app-service1
+  template:
+    metadata:
+      labels:
+        app: group16-app-service1
+    spec:
+      containers:
+      - name: group16-app-service1
+        image: gcr.io/grupo16/service1
+        ports:
+        - containerPort: 8080
+        
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-group16-service2
+  labels: 
+    app: group16-app-service2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group16-app-service2
+  template:
+    metadata:
+      labels:
+        app: group16-app-service2
+    spec:
+      containers:
+      - name: group16-app-service2
+        image: gcr.io/grupo16/service2
+        ports:
+        - containerPort: 8080
+        
+---
+ 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-group16-service3
+  labels: 
+    app: group16-app-service3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group16-app-service3
+  template:
+    metadata:
+      labels:
+        app: group16-app-service3
+    spec:
+      containers:
+      - name: group16-app-service3
+        image: gcr.io/grupo16/service3
+        ports:
+        - containerPort: 8080
+    
+---
+ 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-group16-service4
+  labels: 
+    app: group16-app-service4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group16-app-service4
+  template:
+    metadata:
+      labels:
+        app: group16-app-service4
+    spec:
+      containers:
+      - name: group16-app-service4
+        image: gcr.io/grupo16/service4
+        ports:
+        - containerPort: 8080
+
+    
